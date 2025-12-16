@@ -59,6 +59,7 @@ document.querySelector('.button').addEventListener('click', (e) => {
   const startBut = document.querySelector('.button.start');
   const restartBut = document.querySelector('.button.restart');
   const startMes = document.querySelector('.message-container').children[2];
+  const loseMes = document.querySelector('.message-container').children[0];
 
   if (startBut !== null) {
     game.start();
@@ -71,6 +72,7 @@ document.querySelector('.button').addEventListener('click', (e) => {
   if (restartBut !== null) {
     game.restart();
     setScore();
+    loseMes.classList.add('hidden');
     startMes.classList.remove('hidden');
     restartBut.classList.remove('restart');
     restartBut.textContent = 'Start';
