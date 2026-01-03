@@ -99,7 +99,7 @@ class Game {
           // checking for available cell by
           // traversal in opposite direction of current move
           // and finding the most far empty cell to move
-          for (let availCell = this.size; availCell > 0; availCell--) {
+          for (let availCell = this.size - 1; availCell > 0; availCell--) {
             // check if available cell is empty
             // and it's placed before cell which has to be moved
             if (row[availCell] === 0 && availCell > cellIndex) {
@@ -202,7 +202,7 @@ class Game {
           // checking for available cell by
           // traversal in opposite direction of current move
           // and finding the most far empty cell to move
-          for (let availCell = this.size; availCell > 0; availCell--) {
+          for (let availCell = this.size - 1; availCell > 0; availCell--) {
             const availPlace = this.state[availCell][columnIndex];
 
             // check if available cell is empty
